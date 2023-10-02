@@ -7,14 +7,11 @@
   </head>
   <body>
     <div class="about-page">
-      <div class="navigation">
-        <div class="text-wrapper">Logo</div>
-        <div class="menu-items">
-          <div class="div">About</div>
-          <div class="div">Work</div>
-          <div class="div">Contact</div>
-        </div>
-      </div>
+
+
+      <div id="nav-holder" > </div>
+
+
       <div class="header-section">
         <div class="header-content">
           <div class="title-subtitle">
@@ -30,40 +27,22 @@
         </div>
         <img class="headerimage" src="img/headerimage-1-1.png" />
       </div>
-      <div class="contact-section">
-        <div class="text-wrapper-5">Lets work together</div>
-        <div class="contact-section-2">
-          <div class="contact-info">
-            <div class="title-description">
-              <p class="p">
-                This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com This is a
-                template Figma file, turned into code using Anima. Learn more at AnimaApp.com
-              </p>
-            </div>
-            <div class="social-links">
-              <a href="https://discord.com/invite/eQxkYTNxSp" target="_blank" rel="noopener noreferrer"
-                ><img class="img" src="img/discord.png"
-              /></a>
-              <a href="https://www.facebook.com/animaapp/" target="_blank" rel="noopener noreferrer"
-                ><img class="img" src="img/facebook-1.png"
-              /></a>
-              <a href="https://dribbble.com/animaapp" target="_blank" rel="noopener noreferrer"
-                ><img class="img" src="img/dribbble-1.png"
-              /></a>
-              <a href="https://www.instagram.com/animaapp/?hl=en" target="_blank" rel="noopener noreferrer"
-                ><img class="img" src="img/nstagram-1.png"
-              /></a>
-              <a href="https://www.behance.net/Anima_design" target="_blank" rel="noopener noreferrer"
-                ><img class="img" src="img/behance.png"
-              /></a>
-            </div>
-          </div>
-          <div class="contact-form">
-            <div class="input-fields"><input class="input-field" /> <input class="input-field" /></div>
-            <button class="contact-wrapper"><div class="text-wrapper-4">Submit</div></button>
-          </div>
-        </div>
-      </div>
+
+      <div id="footer-holder" > </div>
+
+
     </div>
   </body>
 </html>
+
+<script src="//code.jquery.com/jquery.min.js"></script>
+<script>
+$.get("navigation.html", function(data){
+    $("#nav-holder").replaceWith(data);
+});
+
+$.get("footer.html", function(data){
+    $("#footer-holder").replaceWith(data);
+});
+
+</script>
